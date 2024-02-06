@@ -8,6 +8,7 @@ public class mapGrid : MonoBehaviour
     [SerializeField] private int gridHeight;
     [SerializeField] private float gridCellSize;
     [SerializeField] private float cellOffset;
+    [SerializeField] private float leftOffset;
 
     [SerializeField] private GameObject cellPrefab;
 
@@ -22,7 +23,7 @@ public class mapGrid : MonoBehaviour
             for (int j = 0; j < gridHeight; j++)
             {
                 Vector3 pos = new Vector3(i * gridCellSize, j * gridCellSize, 0);
-                pos.x -= left - cellOffset;
+                pos.x -= left - cellOffset - leftOffset;
                 pos.y -= orthSize - cellOffset;
                 Instantiate(cellPrefab, pos, Quaternion.identity);
             }
