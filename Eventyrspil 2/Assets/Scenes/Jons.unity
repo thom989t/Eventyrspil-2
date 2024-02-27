@@ -352,6 +352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1171506325}
   - component: {fileID: 1171506326}
+  - component: {fileID: 1171506327}
   m_Layer: 0
   m_Name: gridManager
   m_TagString: Untagged
@@ -394,6 +395,19 @@ MonoBehaviour:
   leftOffset: 1
   mowerColor: {r: 1, g: 0, b: 0, a: 1}
   cellPrefab: {fileID: 5798733685761378713, guid: 250c90cdac6e381448856648a1a95b61, type: 3}
+--- !u!114 &1171506327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171506324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 966858e7509caec4d9f6de015498553f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 8846601901083686920, guid: 06d4a8c2ea74d2f4f977408f3b1aaf52, type: 3}
 --- !u!1 &2109099870
 GameObject:
   m_ObjectHideFlags: 0
