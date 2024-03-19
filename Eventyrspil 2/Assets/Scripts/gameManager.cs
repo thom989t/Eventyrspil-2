@@ -23,7 +23,10 @@ public class gameManager : MonoBehaviour
             if (hit.collider.CompareTag("Grid"))
             {
                 Transform tileT = hit.collider.transform;
+                if (tileT.GetComponent<tile>().IsPlaced) return;
+
                 Instantiate(tower, tileT.position, Quaternion.identity);
+                tileT.GetComponent<tile>().IsPlaced = true;
             }
         }
     }
