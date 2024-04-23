@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
-
+    
 public class Towers : MonoBehaviour
 {
     [SerializeField] float dist;
@@ -33,11 +33,13 @@ public class Towers : MonoBehaviour
     IEnumerator Shoot()
     {
         Instantiate(bullet, transform.position, Quaternion.identity);
-        while(time > 0)
-        {
-            time -= 1;
-            yield return new WaitForSeconds(1);
-        }
+        //while(time > 0)
+        //{
+        //    time -= 1;
+        //    yield return new WaitForSeconds(1);
+        //}
+
+        yield return new WaitForSeconds(time);
 
         canShoot = true;
         time = maxTime;
