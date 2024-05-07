@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Jons.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Salemander.unity
+    guid: b3ef614699b84ac458e8199a94580adf
   m_configObjects: {}

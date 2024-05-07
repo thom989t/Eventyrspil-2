@@ -23,10 +23,20 @@ public class gameManager : MonoBehaviour
             if (hit.collider.CompareTag("Grid"))
             {
                 Transform tileT = hit.collider.transform;
-                if (tileT.GetComponent<tile>().IsPlaced) return;
+                if (tileT.GetComponent<tile>().IsPlaced)
+                {
+                    GameObject tempvar = tileT.GetComponent<tile>().Tower;
+                    tileT.GetComponent<tile>().Tower = null;
+                    Destroy(tempvar);
+                    tileT.GetComponent<tile>().IsPlaced = false;
+                }
+                else
+                {
+                    tileT.GetComponent<tile>().Tower = Instantiate(tower, tileT.position, Quaternion.identity);
+                    tileT.GetComponent<tile>().IsPlaced = true;
+                }
 
-                Instantiate(tower, tileT.position, Quaternion.identity);
-                tileT.GetComponent<tile>().IsPlaced = true;
+                
             }
         }
     }
